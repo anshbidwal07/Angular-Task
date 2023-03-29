@@ -1,0 +1,88 @@
+<mat-toolbar color="primary" style="position: fixed; top: 0px; z-index: 2;">
+    <mat-toolbar-row style="z-index: 3">
+        <button mat-icon-button (click)="sidenav.toggle();">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <h1 style="margin-top: 20px;">Dashboard</h1>
+        <div class="spacer"></div>
+    </mat-toolbar-row>
+</mat-toolbar>
+<div style="z-index: -1;">
+<div style="margin-top: 4.2% ; display: flex; flex-direction: columns; position:absolute;top: 0;bottom: 0;left: 0;right: 0; height: 1000px;">
+
+<mat-sidenav-container style="flex: 1; height: 100%; visibility: collapse;">
+  <mat-sidenav #sidenav opened="false" mode="side">
+        <mat-nav-list style="background-color:white; z-index: 4;">
+            <mat-accordion>
+                <mat-expansion-panel (opened)="panelOpenState = true"
+                                     (closed)="panelOpenState = false">
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      Home
+                    </mat-panel-title>
+                  </mat-expansion-panel-header>
+                  <p>Element 1</p>
+                  <p>Element 2</p>
+                  <p>Element 3</p>
+                </mat-expansion-panel>
+              </mat-accordion>
+
+              <mat-accordion>
+                <mat-expansion-panel (opened)="panelOpenState = true"
+                                     (closed)="panelOpenState = false">
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      List
+                    </mat-panel-title>
+                  </mat-expansion-panel-header>
+                  <p>Product 1</p>
+                  <p>Product 2</p>
+                  <p>Product 3</p>
+                </mat-expansion-panel>
+              </mat-accordion>
+
+              <mat-accordion>
+                <mat-expansion-panel (opened)="panelOpenState = true"
+                                     (closed)="panelOpenState = false">
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      Contact Us
+                    </mat-panel-title>
+                  </mat-expansion-panel-header>
+                  <p>Mobile Number</p>
+                  <p>Addredd</p>
+                </mat-expansion-panel>
+              </mat-accordion>
+
+        </mat-nav-list>
+     <mat-sidenav-content>
+        <div style="width: 50px;">
+        </div>
+     </mat-sidenav-content>
+  </mat-sidenav>
+</mat-sidenav-container>
+</div>
+</div>
+
+<div style="margin: 100px;">
+
+</div>
+
+<div style="display: flex;">
+    <app-card1></app-card1>
+    <app-card2></app-card2>
+</div>  
+<div style="display: flex;">
+    <app-cards></app-cards>
+    <app-card4></app-card4>
+</div>
+
+
+<footer class="bg-light text-center text-lg-start" style="position: relative; bottom: 0px; text-align: center;background-color: rgba(0, 0, 0, 0.2); height: 30px;">
+    
+    <div class="text-center p-3">
+      © 2020 Copyright:
+      <a class="text-dark" href="https://test.com/">test.com</a>
+    </div>
+    
+</footer>

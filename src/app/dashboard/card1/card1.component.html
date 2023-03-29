@@ -1,0 +1,32 @@
+<mat-card class="example-card">
+    <h1 style="justify-content: center; display: flex; margin-top: 15%;">Enter Details</h1>
+    <mat-card-header>
+        <mat-card-title-group style="display: block;">
+            <mat-card-title>                
+
+            </mat-card-title>
+            <mat-card-subtitle></mat-card-subtitle>
+            <form action="" [formGroup]="cardForm" (ngSubmit)="onSubmit">
+                <div class="flex-input">
+                    <label for="name" class="card-labels">Name   </label>
+                    <input  class="card-field" type="text" placeholder="Enter name" name="name" formControlName="name" required>
+                    <br>
+                    <label for="email" class="card-labels">Email   &nbsp;</label>
+                    <input class="card-field" type="text" placeholder="Enter email" name="email" formControlName="email" required>
+                    <br>
+                    <div class="card-field" style="text-align: center;">
+                        <button (click)="onSubmit()" type="submit" class="card-labels submit-button"> Submit</button>
+                    </div>
+                </div>
+            </form>
+        </mat-card-title-group>
+    </mat-card-header>
+    <mat-card-content>
+
+
+
+
+
+
+    </mat-card-content>
+</mat-card>
