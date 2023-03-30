@@ -5,7 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DashboardModule } from './dashboard/dashboard.module';
-
+import { ServiceService } from './services/service.service';
+import { HttpInterceptor, HTTP_INTERCEPTORS } from '@angular/common/http';
 // import { MatButtonModule} from '@angular/material/button'
 // import { MatSidenavModule} from '@angular/material/sidenav'
 // import { MatToolbarModule} from '@angular/material/toolbar';
@@ -49,7 +50,13 @@ import { DashboardModule } from './dashboard/dashboard.module';
     // ReactiveFormsModule,
     // MatExpansionModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: ServiceService,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
