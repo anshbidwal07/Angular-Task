@@ -6,7 +6,8 @@ const routes: Routes = [
   {path:'', component:HomeComponent},
   // {path:'app',component:AppComponent},
   // {path:'', redirectTo: '/home', pathMatch:'full'},
-   {path:'lazy', loadChildren:() => import('./lazyload/lazyload.module').then(mod=>mod.LazyloadModule)}
+  //   {path:'home', loadChildren:() => import('./dashboard/dashboard.module').then(mod=>mod.DashboardModule)},
+  {path:'lazy', loadChildren:() => import('./lazyload/lazyload.module').then(mod=>mod.LazyloadModule)}
 ];
 
 @NgModule({

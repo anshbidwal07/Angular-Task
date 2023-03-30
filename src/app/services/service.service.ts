@@ -9,6 +9,5 @@ export class ServiceService {
 
   constructor() { }
   
-
   dat  = new Subject <any>();
 }

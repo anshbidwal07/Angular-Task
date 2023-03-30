@@ -10,8 +10,8 @@ import { ServiceService } from 'src/app/services/service.service';
 export class Card1Component {
 
   cardForm = new FormGroup({
-    name:  new FormControl(""),
-    email: new FormControl("")
+    name:  new FormControl("", [Validators.required]),
+    email: new FormControl("", [Validators.email,Validators.required])
   })
 
 
@@ -23,6 +23,14 @@ export class Card1Component {
   onSubmit(){
     const service = new ServiceService();
     this._serv.dat.next(this.cardForm)
+  }
+
+  get name(){
+    return this.cardForm.get('name')
+  }
+
+  get email(){
+    return this.cardForm.get('email')
   }
 
 }
