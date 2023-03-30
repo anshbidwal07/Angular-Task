@@ -11,7 +11,7 @@ export class ServiceService implements HttpInterceptor {
   constructor() { }
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    console.log("Inside the intercepter MP 09")
+    console.log("Inside the interceptor")
     console.log("Request is ", req)
     const authReq = req.clone({ headers: req.headers.set('Auth','abc')});
     console.log("Modified request is: ", authReq)
